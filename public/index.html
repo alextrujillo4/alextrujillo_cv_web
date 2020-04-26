@@ -19,6 +19,7 @@
     <link href="css/animate.css" rel="stylesheet">
     <!-- General styles -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -302,6 +303,48 @@
       </div><!-- /container -->
     </footer><!-- /pd-96 -->
     <!-- ======== /FOOTER ======== -->
+    <!-- ======== /BOT SCRIPT ======== -->
+    <a id="marcatelButton" style="position: fixed; bottom:0px; right: 0px; margin: 24px;"
+       class="fab">
+      <i class="material-icons" style="margin-bottom: auto; margin-top: auto; margin-top: 18px; margin-left: 18px; position: absolute">chat</i>
+    </a>
+    <iframe id="martacelIframe"  src="https://marcatel-bot.firebaseapp.com/"
+            style="width: 350px;height: 500px;
+        display: none;
+        position: fixed; bottom:0px; right: 0px; margin: 60px;
+        box-shadow: 0 20px 80px rgba(0,0,0,.6);
+        border-radius: 5px;overflow: hidden;
+        border: none;">
+    </iframe>
+    <script>
+      marcatelButton.onclick = function(){
+        if(document.getElementById('martacelIframe').style.display == "none"){
+          document.getElementById('martacelIframe').style.display = "block";
+        }else{
+          document.getElementById('martacelIframe').style.display = "none";
+        }
+      };
+    </script>
+    <style>
+      .fab {
+        width: 60px;
+        height: 60px;
+        background-color: red;
+        border-radius: 50%;
+        box-shadow: 0 6px 6px 0 #000;
+        transition: all 0.1s ease-in-out;
+        color: white;
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+      }
+      .fab:hover {
+        box-shadow: 0 6px 14px 0 #666;
+        transform: scale(1.05);
+      }
+    </style>
+    <!-- ======== END BOT SCRIPT ======== -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
